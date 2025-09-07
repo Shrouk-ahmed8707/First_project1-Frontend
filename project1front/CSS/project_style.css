@@ -1,0 +1,1177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.351);
+    position: fixed;
+    top: 0;
+    z-index: 20;
+}
+
+.header_icon {
+    width: 50px;
+    height: 50px;
+    color: #8e834e;
+    font-size: 30px;
+    margin-left: 35px;
+    margin-top: 9px;
+    float: left;
+}
+
+.heder_search {
+    float: left;
+    margin-top: 11px;
+    margin-left: 10px;
+}
+
+.heder_search [type="search"] {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+.heder_search i {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    margin-left: -30px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.links {
+    float: right;
+    margin-right: 30px;
+    list-style: none;
+    margin-top: 13px;
+}
+
+.links li {
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+    padding: 4px 0;
+}
+
+.links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    padding: 5px 10px;
+}
+
+.links li a:hover {
+    color: #a0975b;
+}
+
+.links li a::after {
+    content: "";
+
+    /* واقفين ازاى */
+    width: 0;
+    height: 2px;
+
+    /* واقفين فين */
+    bottom: 0;
+    left: 0;
+
+    position: absolute;
+
+    background: #a0975b;
+
+    opacity: 1;
+
+}
+
+.links li a:hover::after {
+    width: 100%;
+    height: 2px;
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.363);
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    visibility: hidden;
+    border-radius: 10px;
+}
+
+.dropdown-content li a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    color: #8e834e;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.home {
+    width: 100%;
+    /* viewport */
+    height: 100vh;
+    background-image: url("../project_images/damian-piasek-cRz2TacOBX0-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home-overlay {
+    position: absolute;
+    /* الابعاد  */
+    width: 100%;
+    height: 100%;
+    /* البداية  */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* اللون والشفافية  */
+    background-color: rgba(0, 0, 0, 0.351);
+}
+
+.home-content {
+    position: absolute;
+    /* hero images  */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    opacity: .9;
+}
+
+.home-content .home-btn {
+    width: 130px;
+    height: 40px;
+    padding: 0px 10px;
+    text-transform: capitalize;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+}
+
+.home-btn:hover {
+    opacity: 0.7;
+}
+
+.btn2 {
+    margin-left: 15px;
+    background-color: #7f784c;
+    color: #fff;
+}
+
+/*  section 2 */
+.Welocme_container {
+    width: 80%;
+    margin: auto;
+}
+
+.welcome-parent {
+    width: 100%;
+    margin-top: 100px;
+    height: 100vh;
+}
+
+.welcome-title,
+.card-title {
+    font-size: 35px;
+    text-align: center;
+}
+
+.welcome-underline {
+    width: 100px;
+    height: 5px;
+    background-color: #a0975b;
+    margin: 10px auto;
+}
+
+.welcome-card {
+    width: 30%;
+    height: 300px;
+    border-radius: 10px;
+    float: left;
+    text-align: center;
+    border: 2px solid #898037;
+    margin: 100px 0px;
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-card::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    background: #6b696a;
+    opacity: .8;
+    border-radius: 5px;
+    /* اخليه clickable   لو معملتوش وجيت دوست على اللينك مش هيكون اكتيف */
+    z-index: -1;
+}
+
+.welcome-card:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    transition: 1s;
+}
+
+.welcome-card:hover h3 {
+    color: #fff;
+}
+
+.welcome-card:hover p {
+    color: #6a6868;
+}
+
+.card2 {
+    margin: 100px 5%;
+}
+
+.leaf {
+    color: rgb(88, 207, 88);
+}
+
+.spray {
+    color: #E75480;
+}
+
+.heart {
+    color: #db1807;
+}
+
+.spray,
+.heart,
+.leaf {
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.welcome-card i {
+    font-size: 40px;
+}
+
+.welcome-card h3 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.welcome-card .title1,
+.welcome-card .title2,
+.welcome-card .title3 {
+    color: #000000;
+}
+
+.welcome-card p {
+    font-size: 17px;
+    margin: 40px 0;
+    color: #474646;
+    padding: 0px 5px;
+}
+
+.welcome-card:hover p {
+    color: #030303;
+}
+
+.welcome-card a {
+    text-decoration: none;
+    color: #a0975b;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #a0975b;
+}
+
+.welcome-card .a2,
+.welcome-card .a1,
+.welcome-card .a3 {
+    background-color: #7f784c;
+    color: #fff;
+}
+
+.card-container {
+    width: 100%;
+    background-color: #647064c8;
+    overflow: auto;
+    height: 100vh;
+}
+
+.card-parent {
+    width: 80%;
+    margin: auto;
+}
+
+.card {
+    width: 32%;
+    border-radius: 5px;
+    float: left;
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    border-radius: 5px;
+    display: block;
+}
+
+.cards2,
+.cards5 {
+    margin: 0px 2%;
+}
+
+.card-title {
+    margin: 50px 0px 0px 0px;
+    color: #fff;
+    font-size: 35px;
+}
+
+.card-underline {
+    width: 100px;
+    height: 5px;
+    background-color: #a0975b;
+    margin: 10px auto 80px;
+}
+
+.card .card-icons {
+    /* """"overlay """"*/
+    position: absolute;
+    /* الابعاد */
+    width: 100%;
+    height: 100%;
+    /* البداية  */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* اللون والشفافية  */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* اخفاء */
+    visibility: hidden;
+}
+
+.card:hover .card-icons {
+    /* الظهور عند ل hover */
+    visibility: visible;
+}
+
+.card-icons h2 {
+    color: #fff;
+    font-size: 40px;
+    padding: 20px;
+    text-transform: uppercase;
+    opacity: 0.8;
+
+}
+
+.card-icons p {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.card-icons i {
+    color: #4e4d4d;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.offer-container {
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+}
+
+.offer-content {
+    text-align: center;
+    margin: 70px 0;
+    font-size: 30px;
+}
+
+.offer-underline {
+    width: 100px;
+    height: 5px;
+    background-color: #a0975b;
+    margin: 15px auto;
+}
+
+.offer-parent {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.offer-card {
+    width: 30%;
+    border-radius: 5px;
+    float: left;
+    background-color: #FCF3F3;
+    margin-top: 40px;
+    height: 200px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.offer-card::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+
+    top: 0;
+    left: 0;
+
+    border-radius: 5px;
+    background-color: #868585;
+    opacity: 1;
+    z-index: -1;
+}
+
+.offer-card:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    transition: .8s;
+    border-radius: 5px;
+}
+
+.offer-card:hover h3 {
+    color: #fff;
+}
+
+.offer-card:hover p {
+    color: #030303;
+}
+
+.offer-card .gem-icon {
+    color: #31D2F7;
+}
+
+.offer-card .leaf-icon {
+    color: green;
+}
+
+.offer-card .spray-icon {
+    color: #E75480;
+}
+
+.offer-card .heart-icon {
+    color: #db1807;
+}
+
+.offer-card .star-icon {
+    color: #FFD700;
+}
+
+.offer-card .gift-icon {
+    color: #48a6b7;
+}
+
+.offer-card i {
+    font-size: 35px;
+    margin: 15px 10px;
+}
+
+.offer-card .offer-card-title {
+    color: #070707;
+    font-size: 25px;
+    display: inline;
+}
+
+.offer-card .offer-card-p {
+    font-size: 17px;
+    margin: 0px 60px;
+    color: #474646;
+}
+
+.offercard2,
+.offercard5 {
+    margin: 40px 5% 0 5%;
+}
+
+.choose-container {
+    width: 80%;
+    margin: auto;
+}
+
+.choose-parent {
+    width: 100%;
+    height: 100vh;
+}
+
+.choose-content {
+    float: left;
+    width: 50%;
+    margin: 90px 10% 0 0;
+}
+
+.choose-img {
+    float: left;
+    width: 40%;
+    margin-top: 20px;
+}
+
+.choose-title {
+    font-size: 30px;
+}
+
+.choose-underline {
+    width: 100px;
+    height: 4px;
+    background-color: #a0975b;
+    margin: 15px 0;
+}
+
+.choose-p {
+    font-size: 18px;
+    margin: 35px 0;
+    color: #555454;
+}
+
+.choose-list {
+    list-style: none;
+}
+
+.choose-list li {
+    padding: 10px 0;
+    color: #484848;
+}
+
+.choose-img img {
+    width: 450px;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.choose-list-icon {
+    text-align: center;
+    list-style: none;
+}
+
+.choose-list-icon li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px 0 0 5px;
+    border: 1px solid black;
+}
+
+.choose-list-icon .c1 {
+    background-color: #e9a4b9;
+}
+
+.choose-list-icon li:hover {
+    background-color: #e9a4b9;
+}
+
+.award-container {
+    width: 100%;
+    height: 400px;
+    background-image: url(../project_images/md-golam-kibria-es9HY8OYULA-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.parent-award {
+    width: 100%;
+    /* margin: 0 10% 0 10%; */
+    text-align: center;
+    color: #c9bb63;
+}
+
+.trophy,
+.users,
+.projects,
+.cup-coffee {
+    float: left;
+    width: 25%;
+    margin-top: 150px;
+}
+
+.parent-award h3 {
+    font-size: 30px;
+}
+
+.parent-award p {
+    font-size: 18px;
+}
+
+.parent-award i {
+    font-size: 50px;
+    /* padding: 10px; */
+}
+
+.award-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.397);
+}
+
+.table-container {
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    /* background-color: #f0f0f0;
+    overflow: auto; */
+}
+
+.table-parent {
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+}
+
+.table-content h2 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.table-content .table-underline {
+    width: 80px;
+    height: 4px;
+    background-color: #a0975b;
+    margin: 15px auto;
+}
+
+.table-cards {
+    float: left;
+    width: 30%;
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.table-cards h3 {
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.table-cards p {
+    font-size: 17px;
+    color: #474646;
+    margin: 20px 0;
+}
+
+.table-cards .rang-price {
+    /* الدايرة  */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #898037;
+    margin: auto;
+}
+
+.rang-price .price-amount {
+    font-size: 25px;
+    padding: 10px;
+    display: block;
+}
+
+.table-button {
+    width: 170px;
+    height: 40px;
+    padding: 0px 10px;
+    text-transform: capitalize;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #7f784c;
+    color: #fff;
+    cursor: pointer;
+}
+
+.table-card2 {
+    margin: 50px 5% 0;
+}
+
+.table-cards::after {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(142, 131, 66, 0.621);
+    opacity: .7;
+    border-radius: 10px;
+    z-index: -1;
+    content: "";
+}
+
+.table-cards:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    transition: 1s;
+}
+
+.table-cards:hover h3 {
+    color: #8e8342;
+}
+
+.table-cards:hover .rang-price {
+    border: 2px solid #c9bb63;
+}
+
+.table-cards:hover p {
+    color: #030303;
+}
+
+.teams-container {
+    width: 100%;
+    height: 400px;
+    background-image: url("../project_images/trung-nhan-tran-BfSTSfEVWfA-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.teams-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.553);
+    z-index: -1;
+}
+
+.teams-parent {
+    width: 80%;
+    margin: auto;
+}
+
+.team-member {
+    padding: 20px;
+    border-radius: 12px;
+    width: 40%;
+    float: left;
+    margin-top: 100px;
+    color: white;
+}
+
+.team1 {
+    margin: 100px 20% 0 0;
+}
+
+.profile-img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 3px solid white;
+}
+
+.name-role {
+    float: left;
+}
+
+.name-role h2 {
+    margin: 10px 0 0;
+    font-size: 25px;
+}
+
+.name-role h3 {
+    margin: 5px 0 0;
+    font-size: 20px;
+    color: #c3bfbf;
+}
+
+.clear {
+    clear: both;
+}
+
+.team-member p {
+    margin-top: 10px;
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+.our-teams-container {
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+}
+
+.our-teams-parent {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.our-team1 {
+    float: left;
+    width: 30%;
+    /* border: 1px solid black; */
+    text-align: center;
+    margin-top: 10px;
+    color: #000000;
+    background-color: rgb(241, 240, 240);
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+
+}
+
+.our-team1 * {
+    position: relative;
+    z-index: 2;
+}
+
+.our-team1::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: #070707;
+    opacity: .8;
+    border-radius: 10px;
+    /* اخليه clickable   لو معملتوش وجيت دوست على اللينك مش هيكون اكتيف */
+    pointer-events: none;
+}
+
+.our-team1:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    transition: 1s;
+    border-radius: 10px;
+}
+
+.our-teams-content {
+    margin-top: 150px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.our-teams-underline {
+    width: 100px;
+    height: 4px;
+    background-color: #a0975b;
+    margin: 15px auto 0;
+}
+
+.our-teams-img {
+    margin: 20px auto 0;
+    width: 280px;
+    height: 280px;
+    position: relative;
+}
+
+.our-teams-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.211);
+    visibility: hidden;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.our-team1:hover .our-teams-overlay {
+    visibility: visible;
+}
+
+.our-teams-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.our-teams-icons {
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    border-top-right-radius: 10px;
+}
+
+.our-team1:hover .our-teams-icons {
+    visibility: visible;
+}
+
+.our-teams-icons a i {
+    color: #978a32;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px;
+    display: block;
+}
+
+.our-teams-icons a {
+    text-decoration: none;
+}
+
+.our-team1 h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+
+.our-team1 h2 {
+    font-size: 25px;
+    margin: 20px 0 20px 0;
+    text-transform: capitalize;
+}
+
+.ourteam-one {
+    margin: 10px 5% 0;
+}
+
+.our-team1:hover h3,
+.our-team1:hover h2 {
+    color: #544903;
+}
+
+.news-content {
+    text-align: center;
+}
+
+.news-content .news-head {
+    font-size: 35px;
+    text-transform: capitalize;
+}
+
+.news-underline {
+    width: 80px;
+    height: 4px;
+    background-color: #a0975b;
+    margin: 15px auto;
+}
+
+.news-container {
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+}
+
+.news-parent {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.news-team {
+    width: 30%;
+    border: 1px solid black;
+    float: left;
+    text-align: center;
+    height: 540px;
+    border-radius: 10px;
+    /* border: 2px solid #898037; */
+    border: none;
+    position: relative;
+    background-color: #f0eded;
+}
+
+.news-team * {
+    position: relative;
+    z-index: 2;
+}
+
+.news-team::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: #030303;
+    opacity: 0.8;
+    pointer-events: none;
+    border-radius: 10px;
+}
+
+.news-team:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    transition: 1s;
+    border-radius: 10px;
+}
+
+.news-img {
+    width: 280px;
+    height: 280px;
+    margin: 30px 40px;
+}
+
+.news-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.news-icons i {
+    padding: 5px;
+    font-size: 18px;
+    background-color: #e3dede;
+    color: #7f784c;
+    border-radius: 10px;
+    margin: 0 5px 0 10px;
+}
+
+.news-icons span {
+    text-transform: capitalize;
+    color: #3f3e3e;
+}
+
+.news-icons a {
+    text-decoration: none;
+}
+
+.news-team .news-title {
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+
+.news-team .news-p {
+    margin-bottom: 20px;
+    color: #484848;
+    padding: 0 5px;
+}
+
+.news-team .a1 {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    background-color: #7f784c;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.news2 {
+    margin: 0 5%;
+}
+
+.news-team:hover .news-title {
+    color: #7f784c;
+}
+
+.news-team:hover .news-p {
+    color: #353434;
+}
+
+/* ///////////////////////////////////////"""footer""" */
+.footer {
+    background-color: #54490379;
+    width: 100%;
+    height: 350px;
+    text-align: center;
+}
+
+.footer-parent {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.footer-img {
+    width: 250px;
+    height: 200px;
+    margin: auto;
+}
+
+.footer-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.footer-icons {
+    margin: 20px 0;
+}
+
+.footer-icons li {
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #7f784c;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    list-style: none;
+}
+
+.footer-icons li a {
+    text-decoration: none;
+    text-align: center;
+    line-height: 2;
+}
+
+.footer-icons li i {
+    color: #fff;
+    font-size: 30px;
+}
+
+.footer-icons li:hover {
+    background-color: #706c56;
+}
+
+.footer p {
+    color: #ecebeb;
+    font-size: 18px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
